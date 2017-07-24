@@ -13,7 +13,7 @@
 	</context-param>
 	<!-- 编码处理 -->
 	<filter>
-		<filter-name>encodingFilter</filter-name>
+		<filter-name>EncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 		<init-param>
 			<param-name>encoding</param-name>
@@ -21,7 +21,7 @@
 		</init-param>
 	</filter>
 	<filter-mapping>
-		<filter-name>encodingFilter</filter-name>
+		<filter-name>EncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	<!-- 由Spring借助Redis接管HttpSession，实现分布式共享Session
@@ -44,31 +44,31 @@
 		<!--<url-pattern>/captcha</url-pattern>-->
 	<!--</filter-mapping>-->
 	<!-- 单点登录 -->
-	<filter>
-		<filter-name>ssoFilter</filter-name>
-		<filter-class>com.smart.sso.client.SsoFilter</filter-class>
-		<init-param>
-			<param-name>excludes</param-name>
-			<param-value>/login,/logout,/rpc,/swagger-ui.html,/webjars/**,/swagger-resources/**,/v2/api-docs</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>ssoFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	<!--<filter>-->
+		<!--<filter-name>ssoFilter</filter-name>-->
+		<!--<filter-class>com.smart.sso.client.SsoFilter</filter-class>-->
+		<!--<init-param>-->
+			<!--<param-name>excludes</param-name>-->
+			<!--<param-value>/login,/logout,/rpc,/swagger-ui.html,/webjars/**,/swagger-resources/**,/v2/api-docs</param-value>-->
+		<!--</init-param>-->
+	<!--</filter>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>ssoFilter</filter-name>-->
+		<!--<url-pattern>/*</url-pattern>-->
+	<!--</filter-mapping>-->
 	<!-- 权限控制(选配) -->
-	<filter>
-		<filter-name>permissionFilter</filter-name>
-		<filter-class>com.smart.sso.client.PermissionFilter</filter-class>
-		<init-param>
-			<param-name>excludes</param-name>
-			<param-value>/login,/logout,/rpc,/swagger-ui.html,/webjars/**,/swagger-resources/**,/v2/api-docs</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>permissionFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	<!--<filter>-->
+		<!--<filter-name>permissionFilter</filter-name>-->
+		<!--<filter-class>com.smart.sso.client.PermissionFilter</filter-class>-->
+		<!--<init-param>-->
+			<!--<param-name>excludes</param-name>-->
+			<!--<param-value>/login,/logout,/rpc,/swagger-ui.html,/webjars/**,/swagger-resources/**,/v2/api-docs</param-value>-->
+		<!--</init-param>-->
+	<!--</filter>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>permissionFilter</filter-name>-->
+		<!--<url-pattern>/*</url-pattern>-->
+	<!--</filter-mapping>-->
 	<!-- SpringMVC核心 -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>

@@ -1,4 +1,4 @@
-package com.wj.sso.server.dao;
+package com.wj.sso.server.model;
 
 import com.wj.sso.common.tool.model.PersistentModel;
 

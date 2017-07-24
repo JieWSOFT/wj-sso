@@ -1,13 +1,13 @@
-package com.wj.sso.server.dao;
+package com.wj.sso.server.model;
 
 import com.wj.sso.common.tool.model.PersistentModel;
 
-public class UserRole extends PersistentModel {
+public class UserApp extends PersistentModel{
 
-    private static final long serialVersionUID = -3503419852109011255L;
+
+    private static final long serialVersionUID = -3271839526506132171L;
     private Integer appId;
     private Integer userId;
-    private Integer roleId;
 
     public Integer getAppId() {
         return appId;
@@ -23,13 +23,5 @@ public class UserRole extends PersistentModel {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
-    }
-
-    public Integer getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
     }
 }

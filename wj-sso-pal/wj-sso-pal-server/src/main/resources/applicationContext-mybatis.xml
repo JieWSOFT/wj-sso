@@ -19,6 +19,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+        <!-- 配置model的alias,别名(即类名) -->
+        <property name="typeAliasesPackage" value="com.wj.sso.server.model" />
         <property name="mapperLocations" value="classpath:com/wj/sso/server/mapper/*.xml"/>
     </bean>
 </beans>
